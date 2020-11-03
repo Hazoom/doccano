@@ -9,13 +9,13 @@
       to="/"
       style="line-height:0;"
     >
-      <img src="~/assets/icon.png" height="48">
+      <img src="~/assets/rupert.png" height="48">
     </nuxt-link>
     <v-toolbar-title
       v-if="!isAuthenticated"
       class="ml-2 d-none d-sm-flex"
     >
-      doccano
+      Stigma
     </v-toolbar-title>
     <v-btn
       v-if="isAuthenticated && isIndividualProject"

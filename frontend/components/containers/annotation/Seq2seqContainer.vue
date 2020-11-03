@@ -2,9 +2,9 @@
   <div>
     <v-card
       v-if="isReady"
-      class="title mb-5"
+      class="something mb-5"
     >
-      <v-card-text class="title">
+      <v-card-text class="something">
         {{ currentDoc.text }}
       </v-card-text>
     </v-card>
@@ -63,3 +63,11 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.something {
+    white-space: pre-wrap;
+    color: #6F7B7E;
+    font-size: 22px;
+ }
+</style>

@@ -4,9 +4,7 @@
       v-if="isReady"
       class="something mb-5"
     >
-      <v-card-text class="something">
-        {{ currentDoc.text }}
-      </v-card-text>
+      <v-card-text class="something">{{ currentDoc.text }}</v-card-text>
     </v-card>
     <seq2seq-box
       v-if="isReady"

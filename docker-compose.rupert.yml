@@ -1,0 +1,35 @@
+version: "3.7"
+services:
+
+  backend:
+    build: ./app
+    command: ["/app/tools/run.sh"]
+    volumes:
+      - static_volume:/app/staticfiles
+    environment:
+      ADMIN_USERNAME: "admin"
+      ADMIN_PASSWORD: "rupertdoccano"
+      ADMIN_EMAIL: "moshe@hirupert.com"
+      DATABASE_URL: "postgres://postgres:OrENtArBaNaT@10.57.16.3:5432/doccano"
+      ALLOW_SIGNUP: "False"
+      DEBUG: "False"
+  frontend:
+    build: ./frontend
+    volumes:
+      - www:/app/dist
+    environment:
+      GOOGLE_TRACKING_ID: ""
+
+  nginx:
+    build: ./nginx
+    volumes:
+      - www:/var/www/html:ro
+      - static_volume:/static
+    ports:
+      - 80:80
+    depends_on:
+      - backend
+
+volumes:
+  static_volume:
+  www:

@@ -44,7 +44,7 @@
           small
           @click="deleteAnnotation(item.id)"
         >
-          {{ $t('generic.delete') }}
+          mdi-delete
         </v-icon>
       </template>
     </v-data-table>

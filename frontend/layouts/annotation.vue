@@ -49,10 +49,10 @@
           </v-col>
         </v-row>
         <v-row justify="center">
-          <v-col cols="12" md="9">
+          <v-col cols="12">
             <nuxt />
           </v-col>
-          <v-col cols="12" md="3">
+          <v-col cols="12">
             <metadata-box
               v-if="currentDoc && !loading"
               :metadata="JSON.parse(currentDoc.meta)"
